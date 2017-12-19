@@ -22,20 +22,6 @@
             android:textAllCaps="true"
             android:textSize="18sp" />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            android:layout_marginTop="16dp"
-            android:text="@string/rules_header"
-            android:textAllCaps="true"
-            android:textSize="16sp" />
-
-        <ExpandableListView
-            android:id="@+id/expRules"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent" />
-
         <EditText
             android:id="@+id/name_edittext"
             android:layout_height="wrap_content"
@@ -62,22 +48,31 @@
             android:text="@string/question_one_text" />
 
         <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/radioGroupA"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical">
-            <RadioButton android:layout_width="wrap_content"
+            <RadioButton
+                android:id="@+id/radioButtonA1"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="14sp"
                 android:text="@string/first_radio_A" />
-            <RadioButton android:layout_width="wrap_content"
+            <RadioButton
+                android:id="@+id/radioButtonA2"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="14sp"
                 android:text="@string/first_radio_B" />
-            <RadioButton android:layout_width="wrap_content"
+            <RadioButton
+                android:id="@+id/radioButtonA3"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="14sp"
                 android:text="@string/first_radio_C" />
-            <RadioButton android:layout_width="wrap_content"
+            <RadioButton
+                android:id="@+id/radioButtonA4"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="14sp"
                 android:text="@string/first_radio_D" />
@@ -167,22 +162,31 @@
             android:text="@string/question_four_text" />
 
         <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/radioGroupB"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical">
-            <RadioButton android:layout_width="wrap_content"
+            <RadioButton
+                android:id="@+id/radioButtonB1"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="14sp"
                 android:text="@string/fourth_radio_A" />
-            <RadioButton android:layout_width="wrap_content"
+            <RadioButton
+                android:id="@+id/radioButtonB2"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="14sp"
                 android:text="@string/fourth_radio_B" />
-            <RadioButton android:layout_width="wrap_content"
+            <RadioButton
+                android:id="@+id/radioButtonB3"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="14sp"
                 android:text="@string/fourth_radio_C" />
-            <RadioButton android:layout_width="wrap_content"
+            <RadioButton
+                android:id="@+id/radioButtonB4"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="14sp"
                 android:text="@string/fourth_radio_D" />
@@ -205,22 +209,31 @@
             android:text="@string/question_five_text" />
 
         <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/radioGroupC"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical">
-            <RadioButton android:layout_width="wrap_content"
+            <RadioButton
+                android:id="@+id/radioButtonC1"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="14sp"
                 android:text="@string/fifth_radio_A" />
-            <RadioButton android:layout_width="wrap_content"
+            <RadioButton
+                android:id="@+id/radioButtonC2"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="14sp"
                 android:text="@string/fifth_radio_B" />
-            <RadioButton android:layout_width="wrap_content"
+            <RadioButton
+                android:id="@+id/radioButtonC3"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="14sp"
                 android:text="@string/fifth_radio_C" />
-            <RadioButton android:layout_width="wrap_content"
+            <RadioButton
+                android:id="@+id/radioButtonC4"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="14sp"
                 android:text="@string/fifth_radio_D" />

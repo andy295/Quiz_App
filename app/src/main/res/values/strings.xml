@@ -2,25 +2,11 @@
     <!--Title for the application. [CHAR LIMIT = 12] -->
     <string name="app_name">Quiz App</string>
 
-    <!--Wellcome message for the user. [CHAR LIMIT = 50] -->
+    <!--Welcome message for the user. [CHAR LIMIT = 50] -->
     <string name="welcome">Welcome to Quiz App</string>
 
     <!--Header text for the rule section. [CHAR LIMIT = 20] -->
     <string name="rules_header">Rules</string>
-
-    <!--Header text for the rule section. [CHAR LIMIT = 20]
-    <string name="rules_txt">
-        This is the rules:
-        <xliff:g id="rules">%s</xliff:g>
-    </string>-->
-
-    <!--
-    <string name="rules_txt">
-        \u2022 Username is mandatory\n
-        \u2022 The questions shall be in the form of multiple choice, True / False statement, Specific-answer question etc.\n
-        \u2022 5 marks for correct answer and 0 negative marks for wrong answer or empty answer.\n
-    </string>
-    -->
 
     <!--Hint text display in the empty field for the user's name. [CHAR LIMIT = 20] -->
     <string name="name">Name</string>
@@ -34,16 +20,16 @@
     <string name="question_one_text">For which of the following disciplines is Nobel Prize awarded? </string>
 
     <!--Text for the first answer. [CHAR LIMIT = NONE] -->
-    <string name="first_radio_A">A. Physics and Chemistry</string>
+    <string name="first_radio_A">Physics and Chemistry</string>
 
     <!--Text for the second answer. [CHAR LIMIT = NONE] -->
-    <string name="first_radio_B">B. Physiology or Medicine</string>
+    <string name="first_radio_B">Physiology or Medicine</string>
 
     <!--Text for the third answer. [CHAR LIMIT = NONE] -->
-    <string name="first_radio_C">C. Literature, Peace and Economics</string>
+    <string name="first_radio_C">Literature, Peace and Economics</string>
 
     <!--Text for the fourth answer. [CHAR LIMIT = NONE] -->
-    <string name="first_radio_D">D. All of the above</string>
+    <string name="first_radio_D">All of the above</string>
 
     <!-- ABOUT QUESTION TWO -->
 
@@ -54,7 +40,7 @@
     <string name="question_two_text">The North Atlantic Treaty Organisation was created in </string>
 
     <!--Hint text display in the empty field for the answer two. [CHAR LIMIT = 4] -->
-    <string name="year">Year (C)</string>
+    <string name="year">Year</string>
 
     <!-- ABOUT QUESTION THREE -->
 
@@ -65,16 +51,16 @@
     <string name="question_three_text">Which team(s) has won at least three FIFA World Cups? </string>
 
     <!--Text for the first answer. [CHAR LIMIT = NONE] -->
-    <string name="cb_A">A. Argentina</string>
+    <string name="cb_A">Argentina</string>
 
     <!--Text for the second answer. [CHAR LIMIT = NONE] -->
-    <string name="cb_B">B. Italy</string>
+    <string name="cb_B">Italy</string>
 
     <!--Text for the third answer. [CHAR LIMIT = NONE] -->
-    <string name="cb_C">C. France</string>
+    <string name="cb_C">France</string>
 
     <!--Text for the fourth answer. [CHAR LIMIT = NONE] -->
-    <string name="cb_D">D. Brazil</string>
+    <string name="cb_D">Brazil</string>
 
     <!-- ABOUT QUESTION FOUR -->
 
@@ -85,16 +71,16 @@
     <string name="question_four_text">What is the S.I. unit of temperature? </string>
 
     <!--Text for the first answer. [CHAR LIMIT = NONE] -->
-    <string name="fourth_radio_A">A. Kelvin</string>
+    <string name="fourth_radio_A">Kelvin</string>
 
     <!--Text for the second answer. [CHAR LIMIT = NONE] -->
-    <string name="fourth_radio_B">B. Celsius</string>
+    <string name="fourth_radio_B">Celsius</string>
 
     <!--Text for the third answer. [CHAR LIMIT = NONE] -->
-    <string name="fourth_radio_C">C. Centigrade</string>
+    <string name="fourth_radio_C">Centigrade</string>
 
     <!--Text for the fourth answer. [CHAR LIMIT = NONE] -->
-    <string name="fourth_radio_D">D. Fahrenheit</string>
+    <string name="fourth_radio_D">Fahrenheit</string>
 
     <!-- ABOUT QUESTION FIVE -->
 
@@ -105,97 +91,17 @@
     <string name="question_five_text">The value of Gold is determined in </string>
 
     <!--Text for the first answer. [CHAR LIMIT = NONE] -->
-    <string name="fifth_radio_A">A. London</string>
+    <string name="fifth_radio_A">London</string>
 
     <!--Text for the second answer. [CHAR LIMIT = NONE] -->
-    <string name="fifth_radio_B">B. Rome</string>
+    <string name="fifth_radio_B">Rome</string>
 
     <!--Text for the third answer. [CHAR LIMIT = NONE] -->
-    <string name="fifth_radio_C">C. New York</string>
+    <string name="fifth_radio_C">New York</string>
 
     <!--Text for the fourth answer. [CHAR LIMIT = NONE] -->
-    <string name="fifth_radio_D">D. Teheran</string>
+    <string name="fifth_radio_D">Teheran</string>
 
     <!--Label text for the button. [CHAR LIMIT = 10] -->
     <string name="submit">Submit</string>
-
-
-
-
-
-
-
-
-
-
-    <!--OLD CODE -->
-
-    <!--Header text for the list of toppings. [CHAR LIMIT = 20] -->
-    <string name="toppings">Toppings</string>
-
-    <!--Thank you message for the order summary. toppings [CHAR LIMIT = 20] -->
-    <string name="thank_you">Thank you!</string>
-
-    <!--Label text for the checkbox [CHAR LIMIT = 20] -->
-    <string name="whipped_cream">Whipped Cream</string>
-
-    <!--Label text for the checkbox [CHAR LIMIT = 20] -->
-    <string name="chocolate">Chocolate</string>
-
-    <!--Header text for the quantity ordered. [CHAR LIMIT = 20] -->
-    <string name="quantity">Quantity</string>
-
-    <!--
-        Name for the order summary. It will be show in the format of "Name: Amy" where Amy is the
-        user's name. [CHAR LIMIT = NONE]
-    -->
-    <string name="order_summary_name">
-        Name:
-        <xliff:g id="name" example="Amy">%s</xliff:g>
-    </string>
-
-    <!--
-        Whipped cream topping for the  order summary. It will be shown in the format of
-        "Add whipped cream? true" or "Add whipped cream? false". [CHAR LIMIT = NONE]
-    -->
-    <string name="order_summary_whipped_cream" >
-        Add whipped cream?
-        <xliff:g id="whipped_cream_bool" example="true">%s</xliff:g>
-    </string>
-
-    <!--
-        Chocolate topping for the  order summary. It will be shown in the format of
-        "Add Chocolate? true" or "Add Chocolate? false". [CHAR LIMIT = NONE]
-    -->
-    <string name="order_summary_chocolate" >
-        Add chocolate?
-        <xliff:g id="chocolate_bool" example="true">%s</xliff:g>
-    </string>
-
-    <!--
-        Quantity for the order summary. It will be show in the format of
-        "Quantity: 2" where 2 is the number of cups ordered. [CHAR LIMIT = NONE]
-    -->
-    <string name="order_summary_quantity" >
-        Quantity:
-        <xliff:g id="quantity_value">%s</xliff:g>
-    </string>
-
-    <!--
-        Total price for the order summary email. It will be shown in the format of
-        "Total: $10" where $10 is the price. [CHAR LIMIT = NONE]
-    -->
-    <string name="order_summary_total" >
-        Total: $
-        <xliff:g id="total">%s</xliff:g>
-    </string>
-
-    <!--
-        Subject line for the order summary email. It will be in the format of
-        "Just Java order for Amy" where Amy is the user's name. [CHAR LIMIT = NONE]
-    -->
-    <string name="subject_name" >
-        Just Java order for
-        <xliff:g id="subject">%s</xliff:g>
-    </string>
 </resources>

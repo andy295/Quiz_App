@@ -3,11 +3,11 @@
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- App branding color for the app bar -->
-        <item name="colorPrimary">#009688</item>
+        <item name="colorPrimary">#F44336</item>
         <!-- Darker variant for the status bar and contextual app bars -->
-        <item name="colorPrimaryDark">#00796B</item>
+        <item name="colorPrimaryDark">#D32F2F</item>
         <!-- Theme UI controls like checkboxes and text fields -->
-        <item name="colorAccent">#536FDE</item>
+        <item name="colorAccent">#00B0FF</item>
     </style>
 
     <!-- Style for header text in the order form -->

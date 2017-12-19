@@ -3,108 +3,102 @@ package com.example.android.quiz;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.ExpandableListView;
-import java.text.NumberFormat;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
+import android.widget.CheckBox;
+import android.widget.EditText;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
+import android.widget.Toast;
 
 /**
- * This app displays an order form to order coffee.
+ * This app calculate the user's score.
  */
 public class MainActivity extends AppCompatActivity {
-    private ExpandableListView expLV;
-    private ExpLVAdapter adapter;
-    private ArrayList<String> listCategory;
-    private Map<String, ArrayList<String>> mapChild;
+    private int score = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        expLV = (ExpandableListView) findViewById(R.id.expRules);
-        listCategory = new ArrayList<>();
-        mapChild = new HashMap<>();
-
-        populateData();
     }
 
-
     /**
-     * Example of Comment.
+     * Evaluate which RadioButton is checked
      *
-     * @param price           of the order
-     * @param addWhippedCream is whether or not to add whipped cream to the coffee
-     * @param addChocolate    is whether or not to add chocolate to the coffee
-     * @param addName         is name of customer
-     * @return text summary
+     * @param id         is the identifier of the RadioGroup element
+     * @return the identifier of the selected RadioButton
      */
-    private void populateData() {
-        ArrayList<String> listUser = new ArrayList<>();
-        ArrayList<String> listGame = new ArrayList<>();
-        ArrayList<String> listScore = new ArrayList<>();
+    private int evalueateRadioButton(int id) {
+        RadioGroup radioGroup = (RadioGroup) findViewById(id);
 
-        listCategory.add("User");
-        listCategory.add("Game");
-        listCategory.add("Score");
+        RadioButton rb = (RadioButton) radioGroup.findViewById(radioGroup.getCheckedRadioButtonId());
 
-        listUser.add("Username is mandatory");
-        listGame.add("The questions shall be in the form of multiple choice, True / False statement, Specific-answer question etc.");
-        listScore.add("5 marks for correct answer and 0 negative marks for wrong answer or empty answer.");
-
-        mapChild.put(listCategory.get(0), listUser);
-        mapChild.put(listCategory.get(1), listGame);
-        mapChild.put(listCategory.get(2), listScore);
-
-        adapter = new ExpLVAdapter(this, listCategory, mapChild);
-        expLV.setAdapter(adapter);
+        return radioGroup.indexOfChild(rb);
     }
 
     /**
-     * This method is called when the order button is clicked.
+     * Evaluate which checkbox is checked
+     *
+     * @param id         is the identifier of the checkbox element
+     * @return a string with 1 if checkbox is checked, 0 otherwise
+     */
+    private String evalueateCheckBox(int id) {
+        CheckBox answerCheckBox = (CheckBox) findViewById(id);
+        if(answerCheckBox.isChecked())
+            return "1";
+        else
+            return "0";
+    }
+
+    /**
+     * This method check the answers and print the score on the screen
      */
     public void submitQuiz(View view) {
-        //EditText nameEditText = (EditText) findViewById(R.id.name_edittext);
-        //String name = nameEditText.getText().toString();
+        EditText valueEditText = (EditText) findViewById(R.id.name_edittext);
+        String value = valueEditText.getText().toString();
 
-        //if(name.trim().equals("")) {
-          //  Toast.makeText(this, "Name field is empty, please insert your name", Toast.LENGTH_SHORT).show();
-        //}
-        //else {
-         /*   // Figure out if the user wants whipped cream topping
-            CheckBox whippedCreamCheckBox = (CheckBox) findViewById(R.id.whipped_cream_checkbox);
-            boolean hasWhippedCream = whippedCreamCheckBox.isChecked();
+        if (value.trim().equals("")) {
+            Toast.makeText(this, "Name field is empty, please insert your name", Toast.LENGTH_SHORT).show();
+        } else {
+            //answer question one
+            if(evalueateRadioButton(R.id.radioGroupA)== 3)
+                score += 3;
 
-            // Figure out if the user wants chocolate topping
-            CheckBox chocolateCheckBox = (CheckBox) findViewById(R.id.chocolate_checkbox);
-            boolean hasChocolate = chocolateCheckBox.isChecked();
+            //answer question two
+            valueEditText = (EditText) findViewById(R.id.year_edittext);
+            value = valueEditText.getText().toString();
 
-            // Calculate the price
-            int price = calculatePrice(hasWhippedCream, hasChocolate);
+            if(Integer.parseInt(value) == 1949)
+                score += 3;
 
+            //answer question three
+            value = "";
+            value = value + evalueateCheckBox(R.id.checkbox_A);
+            value = value + evalueateCheckBox(R.id.checkbox_B);
+            value = value + evalueateCheckBox(R.id.checkbox_C);
+            value = value + evalueateCheckBox(R.id.checkbox_D);
 
-            //Display the order summary on the screen
-            String message = createOrderSummary(price, hasWhippedCream, hasChocolate, name);
+            if(Integer.parseInt(value) == 0101)
+                score += 3;
 
-            Intent intent = new Intent(Intent.ACTION_SENDTO);
-            intent.setData(Uri.parse("mailto:"));
-            intent.putExtra(intent.EXTRA_SUBJECT, getString(R.string.subject_name, name));
-            intent.putExtra(intent.EXTRA_TEXT, message);
+            //answer question four
+            if(evalueateRadioButton(R.id.radioGroupB)== 0)
+                score += 3;
 
-            if (intent.resolveActivity(getPackageManager()) != null)
-                startActivity(intent);
+            //answer question five
+            if(evalueateRadioButton(R.id.radioGroupC)== 0)
+                score += 3;
 
-            //displayMessage(message);*/
-     //   }
-    }
+            //print the score on display
+            if(score >= 12)
+                Toast.makeText(this, "Very good, your score is: " + String.valueOf(score), Toast.LENGTH_SHORT).show();
+            else
+            if(score >= 8)
+                Toast.makeText(this, "Not bad, your score is: " + String.valueOf(score), Toast.LENGTH_SHORT).show();
+            else
+                Toast.makeText(this, "Your score is: " + String.valueOf(score) + ", please retry", Toast.LENGTH_SHORT).show();
 
-    /**
-     * This method displays the given quantity value on the screen.
-     */
-    private void displayQuantity(int numberOfCoffees) {
-        /*TextView quantityTextView = (TextView) findViewById(
-                R.id.quantity_text_view);
-        quantityTextView.setText("" + numberOfCoffees);*/
+            //reset score
+            score = 0;
+        }
     }
 }
